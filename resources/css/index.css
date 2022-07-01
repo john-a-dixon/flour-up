@@ -1,0 +1,721 @@
+/***************************************************GLOBALS***************************************************/
+* { /*Removes the default margins and padding and makes element sizing more accurate*/
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	flex-shrink: 0;
+}
+html {
+	font-size: 12px;
+}
+button {
+	cursor: pointer;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+:root {
+	--main-color: #D7CA1D;
+	--accent-dark-one: #0F1733;
+	--accent-dark-one-trans: #0F1733CC;
+	--accent-light-one: #6B83D6;
+	--accent-light-one-trans: #6B83D6CC;
+	--accent-dark-two: #331368;
+	--accent-light-two: #CC8DD6;
+	--body-font: 'Playfair Display', serif;
+	--functional-font: 'Josefin Sans', sans-serif;
+	--heading-font: 'Berkshire Swash', cursive;
+}
+
+h1, figcaption {
+	font-family: var(--heading-font);
+}
+
+p {
+	font-family: var(--body-font);
+}
+
+a, button, h2 {
+	font-family: var(--functional-font);
+}
+/***************************************************HEADER***************************************************/
+body > header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	background-color: var(--main-color);
+}
+
+#logo {
+	height: 125px;
+	width: 125px;	
+	position: absolute;
+	top: 40px;
+	left: 46%;
+	margin: 0 auto; 
+	transform: rotate(45deg);
+	z-index: 10;
+	background-color: var(--accent-dark-one);
+	overflow: hidden;
+}
+
+#logo img {
+	width: 100%;
+	height: 100%;
+	transform: rotate(-45deg);
+}
+
+/************************RIGHT-ICONS************************/
+#icon-nav {
+	width: 200px;
+	/*Flex*/
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--main-color);
+}
+
+#icon-nav button {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+	transition: background-color 0.30s;
+}
+
+#icon-nav button:hover {
+	background-color: white;
+}
+
+
+#icon-search {
+	background-image: url("../img/search.png");
+}
+
+#icon-cart {
+	background-image: url("../img/cart.png");
+}
+
+#icon-account {
+	background-image: url("../img/account.png");
+}
+
+#icon-menu {
+	background-image: url("../img/menu.png");
+	display: none;
+}
+/************************LEFT-LINKS************************/
+.link-nav {
+	width: 400px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.link-nav a {
+	text-decoration: none;
+}
+
+.link-nav a:hover {
+	text-decoration: underline;
+
+}
+
+.link-nav a:nth-child(1)::after {
+	content: "+";
+}
+/***************************************************MAIN***************************************************/
+body > main {
+	position: relative;
+	top: 100px;
+}
+
+/************************BANNER************************/
+#banner {
+	width: 100%;
+	padding: 100px 0px;
+	background-image: url("../img/banner.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#banner-logo {
+	display: none;
+}
+
+#flour-up {
+	font-family: 'Updock', cursive;
+	font-size: 13rem !important;
+	color: var(--accent-light-two);
+	text-shadow: 3px 3px 1px #0F1733;
+	padding-right: 10%;
+}
+
+#flour-up-header {
+	font-family: 'Updock', cursive;
+	display: none;
+}
+
+#banner > article {
+	height: 700px;
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 75px;
+	background-color: var(--accent-light-one-trans);
+	border: 15px double var(--main-color);
+}
+
+#banner h1 {
+	text-align: center;
+	font-size: 4rem;
+	color: var(--accent-light-two);
+}
+
+#banner > article > h1 {
+	color: var(--main-color);
+	opacity: 1;
+}
+#banner p {
+	font-size: 2rem;
+	text-align: center;
+	line-height: 1.5;
+	opacity: 1;
+	color: var(--accent-dark-two);
+}
+
+#banner button {
+	border-color: transparent;
+	height: 50px;
+	width: 150px;
+	font-size: 1.5rem;
+	opacity: 100% !important;
+	background-color: var(--accent-light-two);
+	transition: background-color 0.15s;
+}
+
+#banner button:hover {
+	background-color: #d3b0d8;
+}
+/************************GOODS************************/
+#goods {
+	width: 100%;
+	padding: 75px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: whitesmoke;
+}
+
+#goods > h1 {
+	width: 400px;
+	text-align: center;
+	font-size: 3rem;
+	color: var(--accent-dark-one);
+}
+
+#goods > div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/************************GOODS LEFT************************/
+#categories {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.menu-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	margin: 25px;
+	height: 400px;
+	width: 400px;
+	transition: background-size 1s;
+}
+
+a.menu-item:hover {
+	background-size: 120%;
+}
+
+#categories > a {
+	font-size: 5rem;
+}
+
+#categories > a h1 {
+	text-shadow: 3px 3px 1px var(--accent-dark-two);
+	color: var(--main-color);
+}
+
+#pies {
+	background-image: url("../img/pies.jpg");
+}
+
+#cakes {
+	background-image: url("../img/cakes.jpg");
+}
+
+#cookies {
+	background-image: url("../img/cookies.jpg");
+}
+
+#pastries {
+	background-image: url("../img/pastries.jpg");
+}
+
+/************************GOODS RIGHT************************/
+#assortment {
+	background-image: url("../img/assortment.jpg");
+	height: 850px;
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+}
+
+#assortment a {
+	height: 100px;
+	padding-top: 15px;
+	font-size: 5rem;
+	width: 100%;
+	text-align: center;
+	background-color: var(--accent-light-one-trans);
+	color: var(--main-color);
+	text-shadow: 2px 2px 1px var(--accent-dark-two);
+}
+
+#assortment a:hover {
+	height: 100px;
+	padding-top: 2.5%;
+	font-size: 5rem;
+	width: 100%;
+	text-align: center;
+	background-color: var(--accent-dark-one);
+	color: var(--main-color);
+	text-shadow: 2px 2px 1px var(--accent-light-two);
+}
+
+#goods a {
+	text-decoration: none;
+}
+/************************STAFF************************/
+#staff {
+	background-image: url("../img/mission");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#who {
+	height: 100%;
+	width: 100%;
+	padding: 75px 0px;
+	background-color: var(--accent-dark-one-trans);
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#who > h1 {
+	font-size: 3rem;
+	width: 300px;
+	text-align: center;
+}
+
+#staff figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	overflow: hidden;
+	height: 500px;
+	width: 300px;
+}
+
+#staff figure img {
+	height: auto;
+	width: 95%;
+	display: block;
+	margin: 0 auto;
+}
+
+#staff figure figcaption {
+	text-align: center;
+	margin-top: -100px;
+}
+
+#staff figcaption {
+	color: var(--accent-light-two);
+	font-size: 2rem;
+}
+
+
+#who > figcaption:nth-child(2){
+	text-align: center;
+}
+
+#who > figcaption:nth-child(4){
+	text-align: center;
+}
+
+#who > figcaption:nth-child(6){
+	text-align: center;
+}
+
+#who span {
+	font-size: 2.75rem;
+	color: var(--accent-light-one);
+	text-decoration: underline;
+}
+
+#founders, #baker-one, #baker-two {
+	margin-bottom: 25px;
+}
+
+#mission {
+	height: 500px;
+	width: 600px;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 90px;
+
+	border: 15px double var(--accent-light-two);
+	background-color: var(--main-color);
+}
+
+#mission h1 {
+	width: 300px;
+	font-size: 3rem;
+	text-align: center;
+	color: var(--accent-dark-two);
+	text-decoration: underline;
+}
+
+#mission p {
+	font-size: 2rem;
+	text-align: center;
+	line-height: 1.5;
+}
+/***************************************************FOOTER***************************************************/
+body > footer {
+	position: relative;
+	padding: 25px 0px;
+	top: 100px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: whitesmoke;
+}
+
+footer > .link-nav > a {
+	color: var(--accent-light-two);
+	margin-bottom: 25px;
+}
+footer h2 {
+	color: var(--accent-dark-two);
+}
+
+/***************************************************MEDIA QUERIES***************************************************/
+@media only screen and (max-width: 1800px) {
+	#categories {
+		width: 100%;
+	}
+
+	.menu-item {
+		height: 350px;
+		width: 350px;
+	}
+
+	#assortment {
+		height: 400px;
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 1600px) {
+	.menu-item {
+		height: 320px;
+		width: 325px;
+	}
+
+}
+@media only screen and  (max-width: 1515px) {
+	#founders, #baker-one, #baker-two {
+		margin-bottom: 25px;
+	}	
+}
+
+@media only screen and (max-width: 1500px) {
+	.menu-item {
+		height: 300px;
+		width: 300px;
+	}
+
+}
+
+@media only screen and (max-width: 1335px) {
+	.menu-item {
+		height: 260px;
+		width: 260px;
+	}
+
+}
+
+
+
+@media only screen and (max-width: 1200px) { 
+	.menu-item {
+		height: 380px;
+		width: 380px;
+	}
+}
+@media only screen and (max-width: 1200px) { 
+	#flour-up-header {
+		display: inline;
+		position: absolute;
+		left: 44.5%;
+		font-size: 4rem;
+		z-index: 11;
+		color: var(--accent-light-two);
+		text-shadow: 3px 3px 1px #0F1733;
+	}
+
+	#logo {
+		height: 70px;
+		width: 70px;
+		top: 15px;
+		left: 47.5%;
+	}
+	
+	header > .link-nav, #icon-search, #icon-account{
+		display: none;
+	}
+
+	#banner {
+		background-image: url("../img/banner-rotate.jpg");
+		background-position-y: -300px;
+	}
+	#icon-nav {
+		width: 150px;
+		justify-content: flex-end;
+	}
+
+	#flour-up {
+		display: none;
+	}
+	#icon-menu {
+		display: inline;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		border-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 70%;
+		transition: background-color 0.30s;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	#flour-up-header {
+		left: 43.5%;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	#assortment a {
+		font-size: 4rem;
+	}
+}
+
+@media only screen and (max-width: 825px) {
+	#banner {
+		background-image: url("../img/banner-rotate.jpg");
+		background-position-y: 0px;
+	}
+
+	footer h2 {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	#assortment a {
+		font-size: 3rem;
+		padding-top: 25px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	body > header {
+		height: 75px;
+		padding: 0 25px;
+	}
+
+	body > main {
+		top: 75px
+	}
+
+	#logo, #flour-up-header {
+		display: none;
+	}
+	
+	#flour-up {
+		margin-top: -100px;
+		display: contents;
+		z-index: 5;
+		color: var(--accent-dark-two) !important;
+		text-shadow: 3px 3px 1px var(--main-color);
+	}
+
+	#banner {
+		flex-direction: column-reverse;
+		justify-content: flex-start;
+	}
+
+	#banner-logo {
+		display: block;
+		height: 100px;
+		width: 100px;
+		/*position: absolute;
+		top: 90px;
+		left: 40%;*/
+		transform: rotate(45deg);
+		background-color: var(--accent-dark-one);
+		overflow: hidden;
+		z-index: 2;
+	}
+
+	#banner-logo img {
+		transform: rotate(-45deg);
+		width: 100%;
+		height: 100%;
+	}
+
+	#banner > article {
+		width: 500px;
+		padding: 45px;
+	}
+
+	#mission {
+		width: 500px;
+		padding: 45px;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	#banner > article, #mission {
+		justify-content: center;
+		height: 500px;
+	}
+
+	#banner p{
+		margin-bottom: 25px;
+	}
+
+	#mission p {
+		margin-top: 25px;
+	}
+
+	#assortment a {
+		font-size: 2.50rem;
+		padding-top: 30px;
+	}
+}
+
+@media only screen and (max-width: 525px) { 
+	#banner > article, #mission {
+		height: 550px;
+		width: 450px;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	#flour-up {
+		font-size: 8rem !important;
+	}
+
+	#banner > article, #mission {
+		height: 450px;
+		width: 350px;
+	}
+
+	#banner h1, #mission h1 {
+		font-size: 3rem;
+	}
+
+	#banner p, #mission p {
+		font-size: 1.25rem;
+	}
+
+	footer > .link-nav {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.menu-item {
+		height: 300px;
+		width: 300px;
+	}
+
+	body > main {
+		top: 50px;
+	}
+
+	body > header {
+		height: 50px;
+	}
+
+	#icon-menu, #icon-nav button {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+
+@media only screen and (max-width: 375px) {
+	#banner > article, #mission {
+		width: 300px;
+	}
+
+	#mission h1 {
+		width: 275px;
+	}
+}
