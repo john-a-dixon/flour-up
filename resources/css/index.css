@@ -275,6 +275,7 @@ a.menu-item:hover {
 #categories > a h1 {
 	text-shadow: 3px 3px 1px var(--accent-dark-two);
 	color: var(--main-color);
+	background-color: var(--accent-light-one-trans);
 }
 
 #pies {
