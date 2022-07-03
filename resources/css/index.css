@@ -1,4 +1,4 @@
-/***************************************************GLOBALS***************************************************/
+/**************************************************GLOBALS**************************************************/
 * { /*Removes the default margins and padding and makes element sizing more accurate*/
 	box-sizing: border-box;
 	margin: 0;
@@ -45,7 +45,7 @@ p {
 a, button, h2 {
 	font-family: var(--functional-font);
 }
-/***************************************************HEADER***************************************************/
+/**************************************************HEADER**************************************************/
 body > header {
 	display: flex;
 	justify-content: space-between;
@@ -158,7 +158,10 @@ body > main {
 	justify-content: space-around;
 	align-items: center;
 }
-
+#banner > article > h1 {
+	font-size: 4rem;
+	text-align: center;
+}
 #banner-logo {
 	display: none;
 }
@@ -166,11 +169,22 @@ body > main {
 #flour-up {
 	font-family: 'Updock', cursive;
 	font-size: 13rem !important;
-	color: var(--accent-light-two);
+	color: var(--main-color);
 	text-shadow: 3px 3px 1px #0F1733;
-	color: var(--accent-dark-one) !important;
-	text-shadow: 3px 3px 1px var(--accent-light-two);
-	padding-right: 10%;
+	text-shadow: 3px 3px 1px var(--accent-dark-one);
+	padding-right: 0;
+	text-align: center;
+}
+
+#flour-up-holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	width: 500px;
+	background-color: var(--accent-light-two-trans);
+	border: 15px double var(--accent-light-one);
+	margin-right: 8%;
 }
 
 #flour-up-header {
@@ -188,12 +202,6 @@ body > main {
 	padding: 75px;
 	background-color: var(--accent-light-one-trans);
 	border: 15px double var(--main-color);
-}
-
-#banner h1 {
-	text-align: center;
-	font-size: 4rem;
-	color: var(--accent-light-two);
 }
 
 #banner > article > h1 {
@@ -546,9 +554,11 @@ footer h2 {
 		justify-content: flex-end;
 	}
 
-	#flour-up {
+	#flour-up,
+	#flour-up-holder {
 		display: none;
 	}
+
 	#icon-menu {
 		display: inline;
 		height: 50px;
