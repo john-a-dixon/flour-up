@@ -1,4 +1,4 @@
-/***************************************************GLOBALS***************************************************/
+/**************************************************GLOBALS**************************************************/
 * { /*Removes the default margins and padding and makes element sizing more accurate*/
 	box-sizing: border-box;
 	margin: 0;
@@ -45,7 +45,7 @@ p {
 a, button, h2 {
 	font-family: var(--functional-font);
 }
-/***************************************************HEADER***************************************************/
+/**************************************************HEADER**************************************************/
 body > header {
 	display: flex;
 	justify-content: space-between;
@@ -180,10 +180,9 @@ body > main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 500px;
+	height: 250px;
 	width: 500px;
 	background-color: var(--accent-light-two-trans);
-	border-radius: 50%;
 	border: 15px double var(--accent-light-one);
 	margin-right: 8%;
 }
