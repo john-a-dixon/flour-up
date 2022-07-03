@@ -28,6 +28,7 @@ button {
 	--accent-light-one-trans: #6B83D6CC;
 	--accent-dark-two: #331368;
 	--accent-light-two: #CC8DD6;
+	--accent-light-two-trans: #CC8DD6CC;
 	--body-font: 'Playfair Display', serif;
 	--functional-font: 'Josefin Sans', sans-serif;
 	--heading-font: 'Berkshire Swash', cursive;
@@ -165,10 +166,10 @@ body > main {
 #flour-up {
 	font-family: 'Updock', cursive;
 	font-size: 13rem !important;
-	/*color: var(--accent-light-two);
-	text-shadow: 3px 3px 1px #0F1733;*/
-	color: var(--accent-dark-two) !important;
-	text-shadow: 3px 3px 1px var(--main-color);
+	color: var(--accent-light-two);
+	text-shadow: 3px 3px 1px #0F1733;
+	color: var(--accent-dark-one) !important;
+	text-shadow: 3px 3px 1px var(--accent-light-two);
 	padding-right: 10%;
 }
 
