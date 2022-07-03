@@ -165,8 +165,10 @@ body > main {
 #flour-up {
 	font-family: 'Updock', cursive;
 	font-size: 13rem !important;
-	color: var(--accent-light-two);
-	text-shadow: 3px 3px 1px #0F1733;
+	/*color: var(--accent-light-two);
+	text-shadow: 3px 3px 1px #0F1733;*/
+	color: var(--accent-dark-two) !important;
+	text-shadow: 3px 3px 1px var(--main-color);
 	padding-right: 10%;
 }
 
@@ -276,6 +278,11 @@ a.menu-item:hover {
 	text-shadow: 3px 3px 1px var(--accent-dark-two);
 	color: var(--main-color);
 	background-color: var(--accent-light-one-trans);
+	text-align: center;
+}
+
+#categories section {
+	width: 100%;
 }
 
 #pies {
