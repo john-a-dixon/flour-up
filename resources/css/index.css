@@ -657,6 +657,10 @@ footer h2 {
 		width: 500px;
 		padding: 45px;
 	}
+
+	body > footer {
+		top: 75px;
+	}
 }
 
 @media only screen and (max-width: 575px) {
@@ -683,6 +687,10 @@ footer h2 {
 	#banner > article, #mission {
 		height: 550px;
 		width: 450px;
+	}
+
+	footer h2 {
+		width: 75%;
 	}
 }
 
@@ -723,10 +731,15 @@ footer h2 {
 		height: 50px;
 	}
 
+	body > footer {
+		top: 50px;
+	}
+
 	#icon-menu, #icon-nav button {
 		height: 30px;
 		width: 30px;
 	}
+
 }
 
 
