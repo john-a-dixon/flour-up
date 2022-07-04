@@ -87,7 +87,6 @@ body > header {
 	right: 25px;
 	text-align: center;
 	color: var(--accent-light-one);
-	text-shadow: -3px 0 var(--accent-dark-one), 0 3px var(--accent-dark-one), 3px 0 var(--accent-dark-one), 0 -3px var(--accent-dark-one);
 }
 
 /************************RIGHT-ICONS************************/
@@ -546,12 +545,6 @@ footer h2 {
 		background-position: center;
 		background-size: 70%;
 		transition: background-color 0.30s;
-	}
-}
-
-@media only screen and (max-width: 1000px) {
-	#flour-up {
-		left: 43.5%;
 	}
 }
 
