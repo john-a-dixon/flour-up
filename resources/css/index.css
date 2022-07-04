@@ -86,7 +86,7 @@ body > header {
 	bottom: 100px;
 	right: 25px;
 	text-align: center;
-	color: var(--accent-light-two);
+	color: var(--accent-light-one);
 	text-shadow: -3px 0 var(--accent-dark-one), 0 3px var(--accent-dark-one), 3px 0 var(--accent-dark-one), 0 -3px var(--accent-dark-one);
 }
 
