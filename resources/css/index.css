@@ -163,9 +163,8 @@ body > main {
 	text-align: center;
 }
 
-#flour-up-header {
+#flour-up {
 	font-family: 'Updock', cursive;
-	display: none;
 }
 
 #banner > article {
@@ -501,7 +500,7 @@ footer h2 {
 	}
 }
 @media only screen and (max-width: 1200px) { 
-	#flour-up-header {
+	#flour-up {
 		display: inline;
 		position: absolute;
 		left: 44.5%;
@@ -545,7 +544,7 @@ footer h2 {
 }
 
 @media only screen and (max-width: 1000px) {
-	#flour-up-header {
+	#flour-up {
 		left: 43.5%;
 	}
 }
@@ -582,10 +581,6 @@ footer h2 {
 
 	body > main {
 		top: 75px
-	}
-
-	#logo, #flour-up-header {
-		display: none;
 	}
 
 	#banner {
