@@ -155,36 +155,12 @@ body > main {
 	background-position: center;
 	background-size: cover;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 }
 #banner > article > h1 {
 	font-size: 4rem;
 	text-align: center;
-}
-#banner-logo {
-	display: none;
-}
-
-#flour-up {
-	font-family: 'Updock', cursive;
-	font-size: 13rem !important;
-	color: var(--main-color);
-	text-shadow: 3px 3px 1px #0F1733;
-	text-shadow: 3px 3px 1px var(--accent-dark-one);
-	padding-right: 0;
-	text-align: center;
-}
-
-#flour-up-holder {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 250px;
-	width: 500px;
-	background-color: var(--accent-light-two-trans);
-	border: 15px double var(--accent-light-one);
-	margin-right: 8%;
 }
 
 #flour-up-header {
@@ -200,6 +176,7 @@ body > main {
 	justify-content: space-around;
 	align-items: center;
 	padding: 75px;
+	margin-left: 100px;
 	background-color: var(--accent-light-one-trans);
 	border: 15px double var(--main-color);
 }
@@ -554,11 +531,6 @@ footer h2 {
 		justify-content: flex-end;
 	}
 
-	#flour-up,
-	#flour-up-holder {
-		display: none;
-	}
-
 	#icon-menu {
 		display: inline;
 		height: 50px;
@@ -615,37 +587,10 @@ footer h2 {
 	#logo, #flour-up-header {
 		display: none;
 	}
-	
-	#flour-up {
-		margin-top: -100px;
-		display: contents;
-		z-index: 5;
-		color: var(--accent-dark-two) !important;
-		text-shadow: 3px 3px 1px var(--main-color);
-	}
 
 	#banner {
 		flex-direction: column-reverse;
 		justify-content: flex-start;
-	}
-
-	#banner-logo {
-		display: block;
-		height: 100px;
-		width: 100px;
-		/*position: absolute;
-		top: 90px;
-		left: 40%;*/
-		transform: rotate(45deg);
-		background-color: var(--accent-dark-one);
-		overflow: hidden;
-		z-index: 2;
-	}
-
-	#banner-logo img {
-		transform: rotate(-45deg);
-		width: 100%;
-		height: 100%;
 	}
 
 	#banner > article {
@@ -695,10 +640,6 @@ footer h2 {
 }
 
 @media only screen and (max-width: 475px) {
-	#flour-up {
-		font-size: 8rem !important;
-	}
-
 	#banner > article, #mission {
 		height: 450px;
 		width: 350px;
