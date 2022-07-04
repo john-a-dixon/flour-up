@@ -68,13 +68,26 @@ body > header {
 	transform: rotate(45deg);
 	z-index: 10;
 	background-color: var(--accent-dark-one);
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 #logo img {
 	width: 100%;
 	height: 100%;
 	transform: rotate(-45deg);
+}
+
+#logo #flour-up {
+	font-family: 'Updock', cursive;
+	transform: rotate(-45deg);
+	font-size: 4.5rem;
+	position: relative;
+	width: 175px;
+	bottom: 100px;
+	right: 25px;
+	text-align: center;
+	color: var(--accent-light-two);
+	text-shadow: -3px 0 var(--accent-dark-one), 0 3px var(--accent-dark-one), 3px 0 var(--accent-dark-one), 0 -3px var(--accent-dark-one);
 }
 
 /************************RIGHT-ICONS************************/
@@ -161,10 +174,6 @@ body > main {
 #banner > article > h1 {
 	font-size: 4rem;
 	text-align: center;
-}
-
-#flour-up {
-	font-family: 'Updock', cursive;
 }
 
 #banner > article {
