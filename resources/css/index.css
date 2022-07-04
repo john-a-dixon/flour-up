@@ -113,6 +113,10 @@ body > header {
 #icon-nav button:hover {
 	background-color: white;
 }
+/*
+#icon-nav button:active {
+	background-color: #f2c4f8;
+}*/
 
 
 #icon-search {
@@ -214,6 +218,10 @@ body > main {
 #banner button:hover {
 	background-color: #d3b0d8;
 }
+/*
+#banner button:active {
+	background-color: #f2c4f8;
+}*/
 /************************GOODS************************/
 #goods {
 	width: 100%;
@@ -506,17 +514,6 @@ footer h2 {
 	.menu-item {
 		height: 380px;
 		width: 380px;
-	}
-}
-@media only screen and (max-width: 1200px) { 
-	#flour-up {
-		display: inline;
-		position: absolute;
-		left: 44.5%;
-		font-size: 4rem;
-		z-index: 11;
-		color: var(--accent-light-two);
-		text-shadow: 3px 3px 1px #0F1733;
 	}
 
 	#logo {
