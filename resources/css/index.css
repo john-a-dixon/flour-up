@@ -60,21 +60,31 @@ body > header {
 
 #logo {
 	height: 125px;
-	width: 125px;	
-	position: absolute;
+	width: 125px;
+	position: relative;
 	top: 40px;
-	left: 46%;
-	margin: 0 auto; 
 	transform: rotate(45deg);
-	z-index: 10;
 	background-color: var(--accent-dark-one);
-	overflow: hidden;
+	right: 100px;
 }
 
 #logo img {
 	width: 100%;
 	height: 100%;
 	transform: rotate(-45deg);
+}
+
+#logo #flour-up {
+	font-family: 'Updock', cursive;
+	transform: rotate(-45deg);
+	font-size: 4.5rem;
+	position: relative;
+	width: 175px;
+	bottom: 100px;
+	right: 25px;
+	text-align: center;
+	color: var(--accent-light-two-trans);
+	text-shadow: 0px 3px 0px var(--accent-dark-one), 0px 1px 0px var(--accent-dark-one), 2px 0px 0px var(--accent-dark-one), 4px 0px 0px var(--accent-dark-one);
 }
 
 /************************RIGHT-ICONS************************/
@@ -100,6 +110,10 @@ body > header {
 #icon-nav button:hover {
 	background-color: white;
 }
+/*
+#icon-nav button:active {
+	background-color: #f2c4f8;
+}*/
 
 
 #icon-search {
@@ -155,41 +169,12 @@ body > main {
 	background-position: center;
 	background-size: cover;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 }
 #banner > article > h1 {
 	font-size: 4rem;
 	text-align: center;
-}
-#banner-logo {
-	display: none;
-}
-
-#flour-up {
-	font-family: 'Updock', cursive;
-	font-size: 13rem !important;
-	color: var(--main-color);
-	text-shadow: 3px 3px 1px #0F1733;
-	text-shadow: 3px 3px 1px var(--accent-dark-one);
-	padding-right: 0;
-	text-align: center;
-}
-
-#flour-up-holder {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 250px;
-	width: 500px;
-	background-color: var(--accent-light-two-trans);
-	border: 15px double var(--accent-light-one);
-	margin-right: 8%;
-}
-
-#flour-up-header {
-	font-family: 'Updock', cursive;
-	display: none;
 }
 
 #banner > article {
@@ -200,6 +185,7 @@ body > main {
 	justify-content: space-around;
 	align-items: center;
 	padding: 75px;
+	margin-left: 100px;
 	background-color: var(--accent-light-one-trans);
 	border: 15px double var(--main-color);
 }
@@ -229,6 +215,10 @@ body > main {
 #banner button:hover {
 	background-color: #d3b0d8;
 }
+/*
+#banner button:active {
+	background-color: #f2c4f8;
+}*/
 /************************GOODS************************/
 #goods {
 	width: 100%;
@@ -522,25 +512,20 @@ footer h2 {
 		height: 380px;
 		width: 380px;
 	}
-}
-@media only screen and (max-width: 1200px) { 
-	#flour-up-header {
-		display: inline;
-		position: absolute;
-		left: 44.5%;
-		font-size: 4rem;
-		z-index: 11;
-		color: var(--accent-light-two);
-		text-shadow: 3px 3px 1px #0F1733;
-	}
 
 	#logo {
 		height: 70px;
 		width: 70px;
-		top: 15px;
-		left: 47.5%;
+		top: 0;
+		left: 50px;
 	}
 	
+	#logo #flour-up {
+		bottom: 75px;
+		right: 55px;
+		text-align: center;
+	}
+
 	header > .link-nav, #icon-search, #icon-account{
 		display: none;
 	}
@@ -549,14 +534,10 @@ footer h2 {
 		background-image: url("../img/banner-rotate.jpg");
 		background-position-y: -300px;
 	}
+	
 	#icon-nav {
 		width: 150px;
 		justify-content: flex-end;
-	}
-
-	#flour-up,
-	#flour-up-holder {
-		display: none;
 	}
 
 	#icon-menu {
@@ -572,10 +553,15 @@ footer h2 {
 	}
 }
 
-@media only screen and (max-width: 1000px) {
-	#flour-up-header {
-		left: 43.5%;
+@media only screen and (max-width: 900px) {
+	#banner {
+		justify-content: center;
+		padding-left: 0px;
 	}
+
+	#banner > article {
+		margin-left: 0px;
+	} 
 }
 
 @media only screen and (max-width: 850px) {
@@ -608,44 +594,24 @@ footer h2 {
 		padding: 0 25px;
 	}
 
-	body > main {
-		top: 75px
+	#logo {
+		height: 55px;
+		width: 55px;
+		left: 50px;
 	}
 
-	#logo, #flour-up-header {
-		display: none;
+	#logo #flour-up {
+		bottom: 70px;
+		right: 65px;
 	}
-	
-	#flour-up {
-		margin-top: -100px;
-		display: contents;
-		z-index: 5;
-		color: var(--accent-dark-two) !important;
-		text-shadow: 3px 3px 1px var(--main-color);
+
+	body > main {
+		top: 75px
 	}
 
 	#banner {
 		flex-direction: column-reverse;
 		justify-content: flex-start;
-	}
-
-	#banner-logo {
-		display: block;
-		height: 100px;
-		width: 100px;
-		/*position: absolute;
-		top: 90px;
-		left: 40%;*/
-		transform: rotate(45deg);
-		background-color: var(--accent-dark-one);
-		overflow: hidden;
-		z-index: 2;
-	}
-
-	#banner-logo img {
-		transform: rotate(-45deg);
-		width: 100%;
-		height: 100%;
 	}
 
 	#banner > article {
@@ -695,10 +661,6 @@ footer h2 {
 }
 
 @media only screen and (max-width: 475px) {
-	#flour-up {
-		font-size: 8rem !important;
-	}
-
 	#banner > article, #mission {
 		height: 450px;
 		width: 350px;
@@ -715,6 +677,10 @@ footer h2 {
 	footer > .link-nav {
 		display: none;
 	}
+
+	#logo #flour-up{
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 425px) {
@@ -726,22 +692,22 @@ footer h2 {
 	body > main {
 		top: 50px;
 	}
-
-	body > header {
-		height: 50px;
-	}
-
+	
 	body > footer {
 		top: 50px;
 	}
 
-	#icon-menu, #icon-nav button {
-		height: 30px;
-		width: 30px;
+	#logo {
+		display: none;
 	}
-
 }
 
+@media only screen and (max-width: 400px) {
+	#banner > article > h1 {
+		font-size: 3rem;
+	
+	}
+}
 
 @media only screen and (max-width: 375px) {
 	#banner > article, #mission {
