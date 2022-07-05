@@ -692,19 +692,20 @@ footer h2 {
 	body > main {
 		top: 50px;
 	}
-	/*
-	body > header {
-		height: 50px;
-	}*/
-
+	
 	body > footer {
 		top: 50px;
+	}
+
+	#logo {
+		display: none;
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	#banner > article > h1 {
 		font-size: 3rem;
+	
 	}
 }
 
