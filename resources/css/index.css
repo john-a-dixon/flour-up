@@ -60,14 +60,12 @@ body > header {
 
 #logo {
 	height: 125px;
-	width: 125px;	
-	position: absolute;
+	width: 125px;
+	position: relative;
 	top: 40px;
-	left: 46%; 
 	transform: rotate(45deg);
-	z-index: 10;
 	background-color: var(--accent-dark-one);
-	/*overflow: hidden;*/
+	right: 100px;
 }
 
 #logo img {
@@ -518,8 +516,8 @@ footer h2 {
 	#logo {
 		height: 70px;
 		width: 70px;
-		top: 15px;
-		left: 47.5%;
+		top: 0;
+		left: 50px;
 	}
 	
 	#logo #flour-up {
@@ -596,6 +594,17 @@ footer h2 {
 		padding: 0 25px;
 	}
 
+	#logo {
+		height: 55px;
+		width: 55px;
+		left: 50px;
+	}
+
+	#logo #flour-up {
+		bottom: 70px;
+		right: 65px;
+	}
+
 	body > main {
 		top: 75px
 	}
@@ -668,6 +677,10 @@ footer h2 {
 	footer > .link-nav {
 		display: none;
 	}
+
+	#logo {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 425px) {
@@ -679,22 +692,21 @@ footer h2 {
 	body > main {
 		top: 50px;
 	}
-
+	/*
 	body > header {
 		height: 50px;
-	}
+	}*/
 
 	body > footer {
 		top: 50px;
 	}
-
-	#icon-menu, #icon-nav button {
-		height: 30px;
-		width: 30px;
-	}
-
 }
 
+@media only screen and (max-width: 400px) {
+	#banner > article > h1 {
+		font-size: 3rem;
+	}
+}
 
 @media only screen and (max-width: 375px) {
 	#banner > article, #mission {
